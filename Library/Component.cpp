@@ -6,11 +6,7 @@ using namespace std;
 using namespace winrt;
 using namespace Windows::Foundation;
 
-#ifdef _WINRT_DLL
-using namespace Library::implementation;
-#else
-using namespace Library;
-#endif
+UsingCppWinRTNamespace()
 
 void Component::DoWork()
 {

@@ -7,3 +7,5 @@
 
 #include <Windows.h>
 #include "winrt/Windows.Foundation.h"
+
+#include "Utilities.h"

@@ -1,22 +1,16 @@
 ﻿#pragma once
 
-#ifdef _WINRT_DLL
-
-#include "Component.g.h"
-
-namespace winrt::Library::implementation
-{
-	struct Component : ComponentT<Component>
-
-#else
-
+#include "Utilities.h"
 #include <winrt/base.h>
 #include <winrt/Windows.Foundation.h>
-namespace Library
-{
-	struct Component
 
+#ifdef _WINRT_DLL
+#include "Component.g.h"
 #endif
+
+CppWinRTNamespace()
+{
+	CppWinRTActivatableClass(Component)
 	{
 		Component() = default;
 
@@ -26,11 +20,4 @@ namespace Library
 	};
 }
 
-#ifdef _WINRT_DLL
-namespace winrt::Library::factory_implementation
-{
-	struct Component : ComponentT<Component, implementation::Component>
-	{
-	};
-}
-#endif
+CppWinRTActivatableClassWithBasicFactory(Component)
