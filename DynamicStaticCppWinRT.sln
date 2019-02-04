@@ -11,7 +11,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Static", "Library\Library.S
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppWinRT", "Client\CppWinRT\Client.CppWinRT.vcxproj", "{5097BA07-EAF9-4DA2-A392-94BA503D015A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shared", "Library\Library.vcxitems", "{419098CF-0425-4042-9792-8C448446CA72}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shared", "Library\Library.Shared.vcxitems", "{419098CF-0425-4042-9792-8C448446CA72}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "Client\CSharp\CSharp.csproj", "{D6C17D63-182F-4048-84CA-BD3BE98C9ACB}"
 EndProject
@@ -21,9 +21,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{4F4F
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Library\Library.vcxitems*{419098cf-0425-4042-9792-8c448446ca72}*SharedItemsImports = 9
-		Library\Library.vcxitems*{9210c248-ecb6-4d16-8cae-73a5293c3214}*SharedItemsImports = 4
-		Library\Library.vcxitems*{ff83c824-0c56-43bc-b61e-b52d04c8954f}*SharedItemsImports = 4
+		Library\Library.Shared.vcxitems*{419098cf-0425-4042-9792-8c448446ca72}*SharedItemsImports = 9
+		Library\Library.Shared.vcxitems*{9210c248-ecb6-4d16-8cae-73a5293c3214}*SharedItemsImports = 4
+		Library\Library.Shared.vcxitems*{ff83c824-0c56-43bc-b61e-b52d04c8954f}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
