@@ -23,9 +23,11 @@ namespace winrt::CppWinRTClient::implementation
 		component.DoWork();
 
 		// get sync result
-		OutputDebugString(component.Echo(L"Hello world!").c_str());
+		OutputDebugString(component.Echo(L"Hello world from C++/WinRT!").c_str());
+		OutputDebugString(L"\n");
 
 		// call async operation
-		OutputDebugString((co_await component.EchoAsync(L"Hello world!")).c_str());
+		OutputDebugString((co_await component.EchoAsync(L"Hello world from C++/WinRT!")).c_str());
+		OutputDebugString(L"\n");
 	}
 }

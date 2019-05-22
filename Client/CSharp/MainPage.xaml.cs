@@ -18,10 +18,10 @@ namespace Client.CSharp
                 component.DoWork();
 
                 // get sync result
-                Debug.WriteLine(component.Echo("Hello world"));
+                Debug.WriteLine(component.Echo("Hello world from C#!"));
 
                 // call async operation
-                Debug.WriteLine(await component.EchoAsync("Hello wordl!"));
+                Debug.WriteLine(await component.EchoAsync("Hello world from C#!"));
             };
         }
     }

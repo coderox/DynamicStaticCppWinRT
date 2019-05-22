@@ -10,7 +10,8 @@ UsingCppWinRTNamespace()
 
 void Component::DoWork()
 {
-	OutputDebugString(L"Doing work");
+	OutputDebugString(L"Doing work in C++");
+	OutputDebugString(L"\n");
 }
 
 hstring Component::Echo(hstring const& message)
