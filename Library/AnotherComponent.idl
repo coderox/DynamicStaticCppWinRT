@@ -1,0 +1,11 @@
+namespace Library
+{
+	[default_interface]
+	runtimeclass AnotherComponent
+	{
+		AnotherComponent();
+		void DoWork();
+		String Echo(String message);
+		Windows.Foundation.IAsyncOperation<String> EchoAsync(String message);
+	}
+}

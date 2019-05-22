@@ -15,6 +15,7 @@ MainPage::MainPage()
 void Client::MainPage::OnLoaded(Object^ sender, RoutedEventArgs^ e)
 {
 	auto component = ref new Library::Component();
+	auto anotherComponent = ref new Library::AnotherComponent();
 
 	// call function
 	component->DoWork();
@@ -24,7 +25,7 @@ void Client::MainPage::OnLoaded(Object^ sender, RoutedEventArgs^ e)
 	OutputDebugString(L"\n");
 
 	// call async operation
-	create_task(component->EchoAsync(L"Hello world from C++/CX!")).then([](String^ echoAsync) {
+	create_task(anotherComponent->EchoAsync(L"Hello world from C++/CX!")).then([](String^ echoAsync) {
 		OutputDebugString(echoAsync->Data());
 		OutputDebugString(L"\n");
 	});

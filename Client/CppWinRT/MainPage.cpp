@@ -1,6 +1,7 @@
 ﻿#include "pch.h"
 #include "MainPage.h"
 #include "Component.h"
+#include "AnotherComponent.h"
 #include <ppltasks.h>
 
 using namespace concurrency;
@@ -18,6 +19,7 @@ namespace winrt::CppWinRTClient::implementation
 	fire_and_forget MainPage::Loaded(IInspectable const&, RoutedEventArgs const&)
 	{
 		Library::Component component;
+		Library::AnotherComponent anotherComponent;
 
 		// call function
 		component.DoWork();
@@ -27,7 +29,7 @@ namespace winrt::CppWinRTClient::implementation
 		OutputDebugString(L"\n");
 
 		// call async operation
-		OutputDebugString((co_await component.EchoAsync(L"Hello world from C++/WinRT!")).c_str());
+		OutputDebugString((co_await anotherComponent.EchoAsync(L"Hello world from C++/WinRT!")).c_str());
 		OutputDebugString(L"\n");
 	}
 }

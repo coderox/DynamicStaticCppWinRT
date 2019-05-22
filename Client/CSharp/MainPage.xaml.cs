@@ -13,6 +13,7 @@ namespace Client.CSharp
             Loaded += async delegate
             {
                 var component = new Library.Component();
+                var anotherComponent = new Library.AnotherComponent();
 
                 // call function
                 component.DoWork();
@@ -21,7 +22,7 @@ namespace Client.CSharp
                 Debug.WriteLine(component.Echo("Hello world from C#!"));
 
                 // call async operation
-                Debug.WriteLine(await component.EchoAsync("Hello world from C#!"));
+                Debug.WriteLine(await anotherComponent.EchoAsync("Hello world from C#!"));
             };
         }
     }
