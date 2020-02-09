@@ -106,11 +106,35 @@
     <ClCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <PostBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">copy /Y "$(TargetDir)Merged\Library.winmd" "$(TargetDir)Library.winmd" </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Copies the merged winmd to appropriate directory for reference resolution</Message>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy /Y "$(TargetDir)Merged\Library.winmd" "$(TargetDir)Library.winmd" </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copies the merged winmd to appropriate directory for reference resolution</Message>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">copy /Y "$(TargetDir)Merged\Library.winmd" "$(TargetDir)Library.winmd" </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Copies the merged winmd to appropriate directory for reference resolution</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
     <ClCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <PostBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">copy /Y "$(TargetDir)Merged\Library.winmd" "$(TargetDir)Library.winmd" </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Copies the merged winmd to appropriate directory for reference resolution</Message>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy /Y "$(TargetDir)Merged\Library.winmd" "$(TargetDir)Library.winmd" </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copies the merged winmd to appropriate directory for reference resolution</Message>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">copy /Y "$(TargetDir)Merged\Library.winmd" "$(TargetDir)Library.winmd" </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Copies the merged winmd to appropriate directory for reference resolution</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
